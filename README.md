@@ -4,16 +4,13 @@ TorchGRL is the source code for our paper **Graph
 Convolution-Based 
 Deep Reinforcement Learning for Multi-Agent 
 Decision-Making in Mixed Traffic Environments** 
-for IV 2022.
-
-TorchGRL is a modular simulation framework that 
+for IV 2022.TorchGRL is a modular simulation framework that 
 integrates different GRL algorithms and SUMO 
 simulation platform to realize the simulation 
 of multi-agents decision-making algorithms 
 in mixed traffic environment. 
 You can  adjust the test scenarios and 
-the implemented GRL algorithm 
-according to your needs.
+the implemented GRL algorithm according to your needs.
 -------------------------------------
 * [Preparation](#preparation)
 * [Installation](#installation)
