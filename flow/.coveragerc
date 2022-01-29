@@ -1,0 +1,25 @@
+[report]
+omit =
+    */python?.?/*
+    */site-packages/nose/*
+    *__init__*
+    */scripts/*
+    */setup.py
+    */flow/utils/shflags
+    *dummy_server.py
+    *aimsun.py
+    *aimsun/run.py
+    *aimsun/api.py
+    *aimsun/generate.py
+    *aimsun/load.py
+    *flow/multiagent_*
+    *flow/singleagent_*
+
+exclude_lines =
+    if __name__ == .__main__.:
+    raise NotImplementedError
+    @ray.remote
+    @abstractmethod
+    def policy_mapping_fn*
+    def main(args)*
+    pragma: no cover
