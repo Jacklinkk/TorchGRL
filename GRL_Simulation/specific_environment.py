@@ -257,10 +257,10 @@ class MergeEnv(Env):
                     # print("drastic lane change: ", veh_id)
 
             self.drastic_veh_id = drastic_veh
-            # if len(rl_ids) != 0:  # GCQ只针对RL车辆进行控制，故若空间中没有RL车辆，则跳过控制环节
-            #     self.k.vehicle.apply_lane_change(rl_ids, rl_actions2)
-            # else:
-            #     pass
+            if len(rl_ids) != 0:  # GCQ只针对RL车辆进行控制，故若空间中没有RL车辆，则跳过控制环节
+                self.k.vehicle.apply_lane_change(rl_ids, rl_actions2)
+            else:
+                pass
 
         return None
 
