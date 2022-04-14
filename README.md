@@ -3,8 +3,8 @@
 TorchGRL is the source code for our paper **Graph 
 Convolution-Based 
 Deep Reinforcement Learning for Multi-Agent 
-Decision-Making in Mixed Traffic Environments** 
-submitted to IV 2022.TorchGRL is a modular simulation framework that 
+Decision-Making in Mixed Traffic Environments**.
+TorchGRL is a modular simulation framework that 
 integrates different GRL algorithms and SUMO 
 simulation platform to realize the simulation 
 of multi-agents decision-making algorithms 
@@ -74,7 +74,7 @@ conda env create -f environment.yml
 
 Activate conda environment:
 ```
-conda activate TorchGCQ
+conda activate TorchGRL
 ```
 
 Install flow from source code:
