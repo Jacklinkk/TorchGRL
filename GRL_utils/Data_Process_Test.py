@@ -1,22 +1,21 @@
-# 该python文件用来绘制结果曲线
+# This python file is used to plot the training curve
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.ndimage import gaussian_filter1d
 
 
 def Data_Loader(data_dir):
-    """
-        此函数用来读取保存的数据
-
-        参数说明:
+     """
+        This function is used to load the training data
+        Parameter Description:
         --------
-        data_dir: 模型及数据保存目录
+        data_dir: model and data storage directory
     """
 
-    # 获取目录
+    # get directory
     Reward_dir = data_dir + "/Test_Rewards.npy"
 
-    # 通过numpy读取数据
+    # load data via numpy
     Reward = np.load(Reward_dir)
 
     return Reward
@@ -24,32 +23,31 @@ def Data_Loader(data_dir):
 
 def Mean_and_Std(Data):
     """
-        此函数用来计算不同sample下数据的平均值以及标准差
-
-        参数说明:
+        This function is used to calculate the mean and standard deviation of the data under different samples
+        Parameter Description:
         --------
-        Data: 需要计算的数据list.
-            Data中每个list的数据形式为[Reward, Loss, Average_Q, Episode]
+        Data: A list of data to be calculated.
+            The data form of each list can be described as [Reward, Loss, Average_Q, Episode]
     """
 
-    # 获取数据list的长度
+    # Get the length of the data list
     Length_Data = len(Data)
 
-    # 计算各个指标的平均值以及标准差
+    # Calculate the mean and standard deviation of each indicator
     # -------------------------------------------------------------- #
-    # 1.针对Reward进行处理
-    Reward = []  # 构建初始矩阵
+    # 1.Reward
+    Reward = []   
     for i in range(0, Length_Data):
         Reward.append(Data[i][0])
-    Reward_Average = np.average(Reward, axis=0)  # 按列计算每个step的均值
-    Reward_Std = np.std(Reward, axis=0)  # 按列计算每个step的标准差
-    Reward_Proceed = [Reward_Average, Reward_Std]  # 将数据组合成矩阵
+    Reward_Average = np.average(Reward, axis=0)  
+    Reward_Std = np.std(Reward, axis=0)  
+    Reward_Proceed = [Reward_Average, Reward_Std] 
     # -------------------------------------------------------------- #
 
 
 if __name__ == '__main__':
-    # (1) 数据处理(3 samples)
-    # 1.目录输入
+    # (1) data processing (3 samples)
+    # 1.directory
     DQN_dir1 = "Logging_Testing/DQN/DQN_1"
     DQN_dir2 = "Logging_Testing/DQN/DQN_2"
     DQN_dir3 = "Logging_Testing/DQN/DQN_3"
@@ -66,7 +64,7 @@ if __name__ == '__main__':
     DD_DQN_dir2 = "Logging_Testing/DD_DQN/DD_DQN_2"
     DD_DQN_dir3 = "Logging_Testing/DD_DQN/DD_DQN_3"
 
-    # 2.数据读取
+    # 2.load data
     Data_DQN1 = Data_Loader(DQN_dir1)
     Data_DQN2 = Data_Loader(DQN_dir2)
     Data_DQN3 = Data_Loader(DQN_dir3)
@@ -87,13 +85,13 @@ if __name__ == '__main__':
     Data_DD_DQN3 = Data_Loader(DD_DQN_dir3)
     Data_DD_DQN = [Data_DD_DQN1, Data_DD_DQN2, Data_DD_DQN3]
 
-    # 3.数据均值计算
+    # 3.Calculate the mean reward
     DQN_Mean = np.mean(Data_DQN)
     DoubleDQN_Mean = np.mean(Data_DoubleDQN)
     DuelingDQN_Mean = np.mean(Data_DuelingDQN)
     DD_DQN_Mean = np.mean(Data_DD_DQN)
 
-    # 4.打印平均奖励
+    # 4.Print the mean reward
     print("------------------ Reward ------------------")
     print("DQN_Reward:", DQN_Mean)
     print("DoubleDQN_Reward:", DoubleDQN_Mean)
