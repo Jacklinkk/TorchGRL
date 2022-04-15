@@ -92,7 +92,6 @@ def make_create_env(params, version=0, render=None):
         sim_params = deepcopy(params['sim'])
         vehicles = deepcopy(params['veh'])
 
-        # 这部分对network类进行了二次实例化，对已实例化的网络可能产生报错
         # network = network_class(
         #     name=exp_tag,
         #     vehicles=vehicles,
@@ -130,7 +129,7 @@ def make_create_env(params, version=0, render=None):
                 "simulator": params['simulator']
             })
 
-        # 该语句报错
+
         return gym.envs.make(env_name)
 
     return create_env, env_name
