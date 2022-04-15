@@ -43,7 +43,7 @@ class torch_GRL(nn.Module):
         X = F.relu(X)
 
         # graph convolution operation
-        A_in_Sparse, _ = dense_to_sparse(A_in_Dense)  # 将observation的邻接矩阵转换成稀疏矩阵
+        A_in_Sparse, _ = dense_to_sparse(A_in_Dense)
         X_graph = self.GraphConv(X, A_in_Sparse)
         X_graph = F.relu(X_graph)
         X_graph = self.GraphConv_Dense(X_graph)
