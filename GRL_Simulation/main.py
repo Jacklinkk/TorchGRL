@@ -130,7 +130,6 @@ flow_params = dict(
 # number of time steps
 flow_params['env'].horizon = 2500
 
-# 进行仿真实验
 from Experiment.DQN_experiments import Experiment
 
 exp = Experiment(flow_params)
