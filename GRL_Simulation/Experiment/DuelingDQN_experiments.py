@@ -168,20 +168,3 @@ class Experiment:
         if testing:
             Testing_GRLModels(GRL, GRL_DuelingDqn, self.env, test_episodes, load_dir, debug_testing)
 
-
-            # 设置logger以打印训练信息以便于理解
-            # import logging
-            # import sys
-            # logging.basicConfig(level=logging.INFO, stream=sys.stdout, format='')
-            #
-            # pfrl.experiments.train_agent_with_evaluation(
-            #     GRL_dqn,
-            #     self.env,
-            #     steps=25000,  # Train the agent for 2000 steps
-            #     eval_n_steps=None,  # We evaluate for episodes, not time
-            #     eval_n_episodes=10,  # num episodes are sampled for each evaluation
-            #     train_max_episode_len=2500,  # Maximum length of each episode
-            #     eval_interval=5000,  # Evaluate the agent after every 1000 steps
-            #     outdir='result',  # Save everything to 'result' directory
-            # )
-
