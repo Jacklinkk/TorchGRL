@@ -162,28 +162,3 @@ class Experiment:
         debug_training = False
         if training:
             Training_Models(GRL, GRL_Dqn, self.env, n_episodes, max_episode_len, save_dir, warmup, debug_training)
-
-        # # 进行模型测试
-        # test_episodes = 10
-        # load_dir = 'Test_Models/DQN/DQN_3'
-        # debug_testing = False
-        # if testing:
-        #     Testing_Models(GRL, GRL_Dqn, self.env, test_episodes, load_dir, debug_testing)
-
-
-            # 设置logger以打印训练信息以便于理解
-            # import logging
-            # import sys
-            # logging.basicConfig(level=logging.INFO, stream=sys.stdout, format='')
-            #
-            # pfrl.experiments.train_agent_with_evaluation(
-            #     GRL_dqn,
-            #     self.env,
-            #     steps=25000,  # Train the agent for 2000 steps
-            #     eval_n_steps=None,  # We evaluate for episodes, not time
-            #     eval_n_episodes=10,  # num episodes are sampled for each evaluation
-            #     train_max_episode_len=2500,  # Maximum length of each episode
-            #     eval_interval=5000,  # Evaluate the agent after every 1000 steps
-            #     outdir='result',  # Save everything to 'result' directory
-            # )
-
