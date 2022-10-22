@@ -1,8 +1,7 @@
 ## TorchGRL
 
-<font size="8">Our new repository has been developed based on this old repository with a number of improvements, 
-please go to the links of our new repository [Graph_CAVs](https://github.com/Jacklinkk/Graph_CAVs) for more information.
-Subsequent improvements and development work will be carried out in the new repository.</font>
+### Our new repository has been developed based on this old repository with a number of improvements, please go to the links of our new repository [Graph_CAVs](https://github.com/Jacklinkk/Graph_CAVs) for more information. Subsequent improvements and development work will be carried out in the new repository.
+
 
 TorchGRL is the source code for our paper **Graph 
 Convolution-Based 
@@ -13,7 +12,7 @@ integrates different GRL algorithms and SUMO
 simulation platform to realize the simulation 
 of multi-agents decision-making algorithms 
 in mixed traffic environment. 
-You can  adjust the test scenarios and 
+You can adjust the test scenarios and 
 the implemented GRL algorithm according to your needs.
 
 -------------------------------------
