@@ -2,7 +2,7 @@
 
 <font size=4>**Our new repository has been developed based on this old repository with a number of improvements, 
 please go to the links of our new repository [Graph_CAVs](https://github.com/Jacklinkk/Graph_CAVs) for more information.
-Subsequent improvements and development work will be carried out in the new repository.**(/font)
+Subsequent improvements and development work will be carried out in the new repository.**</font>
 
 TorchGRL is the source code for our paper **Graph 
 Convolution-Based 
